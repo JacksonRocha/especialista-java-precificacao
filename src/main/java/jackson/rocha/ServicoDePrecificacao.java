@@ -3,7 +3,7 @@ package jackson.rocha;
 public class ServicoDePrecificacao {
     public void definirPrecoVenda(Produto produto, double porcentualMargemLucro) {
 
-        double precoVendaCalculado = produto.precoCusto * ((porcentualMargemLucro / 100) + 1);
+        double precoVendaCalculado = Matematica.calcularAcrescimo(produto.precoCusto, porcentualMargemLucro);
         precoVendaCalculado += Produto.custoEmbalagem;
 
         produto.precoVenda = precoVendaCalculado;
