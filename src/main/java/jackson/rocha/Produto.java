@@ -2,6 +2,7 @@ package jackson.rocha;
 
 public class Produto {
 
+    static double custoEmbalagem;
     double precoCusto;
     double precoVenda;
 
@@ -9,7 +10,7 @@ public class Produto {
         this.precoCusto = precoCusto;
     }
 
-    void alterarPrecoVenda(double precoVenda) {
-        this.precoVenda = precoVenda;
+    void imprimirCustoEmbalagem() {
+        System.out.printf("Custo com embalagem: %.2f\n", Produto.custoEmbalagem);
     }
 }
